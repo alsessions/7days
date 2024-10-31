@@ -1,0 +1,15 @@
+{
+  "name": "Craft 5 Boilerplate",
+  "scripts": {
+    "watch": "npx tailwindcss -i ./src/css/tailwind.css -o ./web/css/styles.css --jit --content './templates/**/*.twig' -w",
+    "build": "npx tailwindcss -i ./src/css/tailwind.css -o ./web/css/styles.css  --jit --content './templates/**/*.twig' -m"
+  },
+  "dependencies": {
+    "postcss": "^8.4.5",
+    "tailwindcss": "^3.4.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.13",
+    "tailwindcss-intersect": "^2.0.1"
+  }
+}
