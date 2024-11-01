@@ -590,6 +590,23 @@ video {
   }
 }
 
+.mx-auto{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mt-4{
+  margin-top: 1rem;
+}
+
+.mt-20{
+  margin-top: 5rem;
+}
+
+.block{
+  display: block;
+}
+
 .flex{
   display: flex;
 }
@@ -598,8 +615,12 @@ video {
   min-height: 100vh;
 }
 
-.flex-grow{
-  flex-grow: 1;
+.w-full{
+  width: 100%;
+}
+
+.max-w-6xl{
+  max-width: 72rem;
 }
 
 .flex-col{
@@ -614,9 +635,64 @@ video {
   justify-content: center;
 }
 
-.text-3xl{
-  font-size: 1.875rem;
-  line-height: 2.25rem;
+.justify-between{
+  justify-content: space-between;
+}
+
+.rounded{
+  border-radius: 0.25rem;
+}
+
+.border{
+  border-width: 1px;
+}
+
+.bg-gray-600{
+  --tw-bg-opacity: 1;
+  background-color: rgb(75 85 99 / var(--tw-bg-opacity));
+}
+
+.bg-gray-300{
+  --tw-bg-opacity: 1;
+  background-color: rgb(209 213 219 / var(--tw-bg-opacity));
+}
+
+.bg-black{
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
+.bg-gray-100{
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+}
+
+.px-2{
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.py-1{
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.px-4{
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.py-10{
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.text-right{
+  text-align: right;
 }
 
 .text-2xl{
@@ -624,12 +700,32 @@ video {
   line-height: 2rem;
 }
 
+.text-3xl{
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.text-lg{
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.text-5xl{
+  font-size: 3rem;
+  line-height: 1;
+}
+
 .font-bold{
   font-weight: 700;
 }
 
-.underline{
-  text-decoration-line: underline;
+.uppercase{
+  text-transform: uppercase;
+}
+
+.text-white{
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .responsive-img {
@@ -639,6 +735,23 @@ video {
 
 .gm-map {
   height: 640px;
+}
+
+.hover\:bg-gray-500:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(107 114 128 / var(--tw-bg-opacity));
+}
+
+.hover\:text-white:hover{
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+@media (min-width: 768px){
+  .md\:text-4xl{
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
 }
 
 

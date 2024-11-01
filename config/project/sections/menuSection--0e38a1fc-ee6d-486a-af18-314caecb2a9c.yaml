@@ -1,0 +1,27 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  - 74d68e85-fc57-4d6a-8266-8593bfafe4fb # Menu Section
+handle: menuSection
+maxAuthors: 1
+name: 'Menu Section'
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  9beb901b-f768-410d-837b-8b81f19768d3: # 7 Days Deli
+    enabledByDefault: true
+    hasUrls: true
+    template: menu/_entry.twig
+    uriFormat: 'menu-section/{slug}'
+type: channel

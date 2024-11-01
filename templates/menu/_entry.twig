@@ -3,16 +3,21 @@
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta charset="utf-8" />
-    <title>Welcome to Craft CMS</title>
+    <title>7 Days Deli & Grill</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
     <meta name="referrer" content="origin-when-cross-origin" />
     <link href="/css/styles.css" rel="stylesheet">
 </head>
 <body class="ltr">
+    {% block content %}
 <div id="container" class="flex flex-col justify-center items-center min-h-screen">
-    <h1 class="text-5xl font-bold">Howdy, we have Tailwind!</h1>
+ 
+    <h1 class="text-5xl font-bold">{{ entry.title }}</h1>
 
-        <a href="/menu" class="mt-4 block border bg-gray-300 px-2 py-1 text-center text-lg uppercase rounded hover:bg-gray-500 hover:text-white">Menu</a>
+
+
+        <a href="/" class="mt-4 block border bg-gray-300 px-2 py-1 text-center text-lg uppercase rounded hover:bg-gray-500 hover:text-white">Home</a>
 </div>
+    {% endblock %}
 </body>
 </html>

@@ -1,0 +1,27 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  - dd36437f-2cfc-40ed-8dbd-159ac519a24e # Rich Text
+handle: menu
+maxAuthors: 1
+name: Menu
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  9beb901b-f768-410d-837b-8b81f19768d3: # 7 Days Deli
+    enabledByDefault: true
+    hasUrls: true
+    template: menu.twig
+    uriFormat: menu
+type: single
