@@ -1,0 +1,15 @@
+columnSuffix: null
+handle: priceHero
+instructions: null
+name: 'Price (hero)'
+searchable: false
+settings:
+  currency: USD
+  defaultValue: null
+  max: null
+  min: 0
+  showCurrency: false
+  size: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Money

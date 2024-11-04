@@ -1,10 +1,10 @@
-defaultPlacement: beginning
+defaultPlacement: end
 enableVersioning: true
 entryTypes:
-  - 74d68e85-fc57-4d6a-8266-8593bfafe4fb # Menu Section
-handle: menuSection
+  - dd36437f-2cfc-40ed-8dbd-159ac519a24e # Rich Text
+handle: homePage
 maxAuthors: 1
-name: 'Menu Section'
+name: 'Home Page'
 previewTargets:
   -
     __assoc__:
@@ -22,9 +22,6 @@ siteSettings:
   9beb901b-f768-410d-837b-8b81f19768d3: # 7 Days Deli
     enabledByDefault: true
     hasUrls: true
-    template: menu/_entry.twig
-    uriFormat: 'menu/{slug}'
-structure:
-  maxLevels: null
-  uid: 7facc492-a196-4a09-b6a3-bc8289aa98aa
-type: structure
+    template: index.twig
+    uriFormat: __home__
+type: single

@@ -10,26 +10,48 @@
 </head>
 <body class="ltr">
     {% block content %}
-{% include "_partials/_nav.twig" %}
-<div class="max-w-6xl mx-auto min-h-screen mt-20">
-    <h1 class="text-5xl font-bold">{{ entry.title }}</h1>
-    {# Create an entry query with the 'section' and 'limit' parameters #}
-{% set myEntryQuery = craft.entries()
-  .section('menuSection')
-  .limit(10) %}
+    {% include "_partials/_nav.twig" %}
+    <div class=" mx-auto mt-20 px-4 md:px-10 xl:px-40 ">
+        <h1 class="text-3xl md:text-4xl lg:text-5xl mb-20 font-medium ">7 Days Deli &amp; Grill</h1>
+        <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-10 mx-auto not-prose">
+            {% set menu = craft.entries().section('menuSection').limit(10) %}
+            {% set entries = menu.all() %}
+            {% for entry in entries %}
+            <div>
+                <h2 class="text-2xl md:text-3xl mb-4 md:mb-6 text-center font-medium">{{ entry.title }}</h2>
+                <div class="text-center md:text-sm px-4">
+                {{ entry.richText }}
+                </div>
+                {% for block in entry.menuItem.all() %}
+               
+                <div class="flex justify-between gap-10 border-b my-2 pb-2">
+                    <div>
+                        <span class="font-medium text-lg">{{ block.title }}</span><br>
+                        <span class="text-sm italic font-medium">{{ block.item }}</span>
+                    </div>
+                    <div class="flex justify-between gap-4">
+                        {% if block.priceHero | length %}
+                        <div class="text-base">{{ block.priceHero | money }}</div>
+                        {% endif %}
+                        {% if block.priceBagel | length %}
+                        <div class="text-base">{{ block.priceBagel | money }}</div>
+                        {% endif %}
+                        {% if block.priceRoll | length %}
+                        <div class="text-base">{{ block.priceRoll | money }}</div>
+                        {% endif %}
+                    </div>
+                </div>
+                {% endfor %}
 
-{# Fetch the entries #}
-{% set entries = myEntryQuery.all() %}
-
-{# Display the entries #}
-{% for entry in entries %}
 
 
-    <h2 class="text-3xl font-bold">{{ entry.title }}</h1>
-    {% endfor %}
 
+            </div>
 
-</div>
+            {% endfor %}
+        </div>
+    </div>
     {% endblock %}
+    {% include "_partials/_footer.twig" %}
 </body>
 </html>

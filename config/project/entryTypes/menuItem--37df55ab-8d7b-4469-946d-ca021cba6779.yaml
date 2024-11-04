@@ -1,6 +1,6 @@
-color: blue
+color: null
 fieldLayouts:
-  d5bbedaa-8cce-40c1-8170-8623174e7f35:
+  d092aa86-8465-4cd5-8504-8c203781e997:
     tabs:
       -
         elementCondition: null
@@ -10,7 +10,7 @@ fieldLayouts:
             autocomplete: false
             autocorrect: true
             class: null
-            dateAdded: '2024-11-01T17:50:54+00:00'
+            dateAdded: '2024-11-04T17:57:02+00:00'
             disabled: false
             elementCondition: null
             id: null
@@ -31,14 +31,14 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: 6e21d29c-df12-4a7c-8419-e0ca61b6014d
+            uid: 7647c052-d9d4-4d3e-ab3c-9cd5d2431a2d
             userCondition: null
             warning: null
             width: 100
           -
-            dateAdded: '2024-11-01T17:52:36+00:00'
+            dateAdded: '2024-11-04T18:03:07+00:00'
             elementCondition: null
-            fieldUid: cb6bdfcf-f7b2-40dd-a5a8-adc0eb8dd464 # Rich Text
+            fieldUid: b98fec3c-d4ba-4e3d-93ac-ec92c32b4715 # Item
             handle: null
             includeInCards: false
             instructions: null
@@ -47,14 +47,14 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 90f56433-e73e-4100-aa2a-6b44d8aba51f
+            uid: d4c5f3ca-91e7-4cdf-b7f0-a8934eb588bf
             userCondition: null
             warning: null
             width: 100
           -
-            dateAdded: '2024-11-04T18:03:19+00:00'
+            dateAdded: '2024-11-04T18:03:07+00:00'
             elementCondition: null
-            fieldUid: 38e2ccaa-d4df-43b3-a821-e0123b45afb4 # Menu Item
+            fieldUid: cf204739-4863-4c56-92f9-dbbb551bc806 # Price (hero)
             handle: null
             includeInCards: false
             instructions: null
@@ -63,17 +63,49 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 62ed80ab-dd3c-4ee1-8f3a-a249f5c3b1db
+            uid: 507fac49-16c6-4438-b7e2-e95aa360f30e
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-11-04T18:03:07+00:00'
+            elementCondition: null
+            fieldUid: b2cddd31-9ff2-4853-b99a-ca30c543baf4 # Price (bagel)
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a3aedba5-c66f-4879-9dd4-990b106a7fb1
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-11-04T18:03:07+00:00'
+            elementCondition: null
+            fieldUid: 909ed758-b171-4ffe-a88f-590a4646fc3d # Price (roll)
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e28e4f20-7253-4f50-8f91-f0417b12e25f
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: e84679b1-8672-4d71-9e4f-00e85a95a7f0
+        uid: 62d9a5fa-5c98-4c15-b7f6-8a23306544c7
         userCondition: null
-handle: menuSection
+handle: menuItem
 hasTitleField: true
-icon: paragraph
-name: 'Menu Section'
+icon: pot-food
+name: 'Menu Item'
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null
