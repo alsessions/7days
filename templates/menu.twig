@@ -8,7 +8,7 @@
             {% set entries = menu.all() %}
             {% for entry in entries %}
             <div>
-                <h2 class="text-2xl md:text-3xl mb-4 md:mb-6 text-center font-bold">{{ entry.title }}</h2>
+                <h2 class="text-2xl md:text-3xl mb-4 md:mb-6 lg:mb-8 text-center font-bold text-indigo-900">{{ entry.title }}</h2>
                 <div class="text-center md:text-sm px-4">
                 {{ entry.richText }}
                 </div>
@@ -16,10 +16,10 @@
                
                 <div class="flex justify-between gap-10 border-b my-2 pb-2">
                     <div>
-                        <span class="font-medium text-lg">{{ block.title }}</span><br>
-                        <span class="text-sm italic font-medium">{{ block.item }}</span>
+                        <span class="text-lg text-gray-800">{{ block.title }}</span><br>
+                        <span class="text-sm italic">{{ block.item }}</span>
                     </div>
-                    <div class="flex justify-between gap-4">
+                    <div class="flex justify-between gap-x-4">
                         {% if block.priceHero | length %}
                         <div class="text-base">{{ block.priceHero | money }}</div>
                         {% endif %}
