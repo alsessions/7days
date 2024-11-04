@@ -1,8 +1,16 @@
-dateModified: 1730755418
+dateModified: 1730759094
 email:
   fromEmail: fultonchain@gmail.com
   fromName: '7 Days Deli'
   transportType: craft\mail\transportadapters\Sendmail
+fs:
+  assets:
+    hasUrls: true
+    name: Assets
+    settings:
+      path: '@webroot/assets'
+    type: craft\fs\Local
+    url: '@web/assets'
 meta:
   __names__:
     0e38a1fc-ee6d-486a-af18-314caecb2a9c: 'Menu Section' # Menu Section
@@ -12,6 +20,7 @@ meta:
     38e2ccaa-d4df-43b3-a821-e0123b45afb4: 'Menu Item' # Menu Item
     74d68e85-fc57-4d6a-8266-8593bfafe4fb: 'Menu Section' # Menu Section
     909ed758-b171-4ffe-a88f-590a4646fc3d: 'Price (roll)' # Price (roll)
+    45012e7e-2478-4168-a39e-1e6f3201a18d: Images # Images
     a9c14982-f200-4896-abb1-79eeae7c2649: Menu # Menu
     a8094769-da3b-455c-8d14-d7f6fe24cdaf: 'Home Page' # Home Page
     b03afd44-8426-4eeb-adb6-47b908e1ad1f: '7 Days Deli' # 7 Days Deli

@@ -1,23 +1,18 @@
-<!DOCTYPE html>
-<html lang="en-US">
-<head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta charset="utf-8" />
-    <title>7 Days Deli & Grill</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
-    <meta name="referrer" content="origin-when-cross-origin" />
-    <link href="/css/styles.css" rel="stylesheet">
-</head>
-<body class="ltr">
+{% include "_partials/_head.twig" %}
     {% block content %}
 {% include "_partials/_nav.twig" %}
 <div class=" mx-auto mt-20 px-4 md:px-10 xl:px-40 min-h-screen ">
-    <h1 class="text-3xl md:text-4xl lg:text-5xl mb-20 font-medium ">7 Days Deli &amp; Grill</h1>
    
+   <div class="grid md:grid-cols-2">
+    
     <div class="prose prose-lg">
         {{ entry.richText }}
     </div>
 
+    <div>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23276.849325897474!2d-76.32427465106558!3d43.17579041621055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d9e45d09389095%3A0xd66a1d43d9a12aa5!2s80%20Smokey%20Hollow%20Rd%2C%20Baldwinsville%2C%20NY%2013027!5e0!3m2!1sen!2sus!4v1730761994748!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+   </div>
 </div>
     {% endblock %}
     {% include "_partials/_footer.twig" %}

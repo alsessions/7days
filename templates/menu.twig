@@ -1,24 +1,14 @@
-<!DOCTYPE html>
-<html lang="en-US">
-<head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta charset="utf-8" />
-    <title>7 Days Deli & Grill</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
-    <meta name="referrer" content="origin-when-cross-origin" />
-    <link href="/css/styles.css" rel="stylesheet">
-</head>
-<body class="ltr">
+{% include "_partials/_head.twig" %}
     {% block content %}
     {% include "_partials/_nav.twig" %}
     <div class=" mx-auto mt-20 px-4 md:px-10 xl:px-40 ">
-        <h1 class="text-3xl md:text-4xl lg:text-5xl mb-20 font-medium ">7 Days Deli &amp; Grill</h1>
+    
         <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-10 mx-auto not-prose">
             {% set menu = craft.entries().section('menuSection').limit(10) %}
             {% set entries = menu.all() %}
             {% for entry in entries %}
             <div>
-                <h2 class="text-2xl md:text-3xl mb-4 md:mb-6 text-center font-medium">{{ entry.title }}</h2>
+                <h2 class="text-2xl md:text-3xl mb-4 md:mb-6 text-center font-bold">{{ entry.title }}</h2>
                 <div class="text-center md:text-sm px-4">
                 {{ entry.richText }}
                 </div>
