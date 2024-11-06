@@ -6,7 +6,7 @@
 
 
 h1, h2, h3 {
-    @apply font-display tracking-wider;
+    @apply font-display tracking-wider text-indigo-900;
 }
 
 .responsive-img {
