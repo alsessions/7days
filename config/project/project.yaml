@@ -1,4 +1,4 @@
-dateModified: 1730759094
+dateModified: 1731016201
 email:
   fromEmail: fultonchain@gmail.com
   fromName: '7 Days Deli'
@@ -13,14 +13,18 @@ fs:
     url: '@web/assets'
 meta:
   __names__:
+    0deede38-242c-46e9-8c78-d873218bc7a7: Triptych # Triptych
     0e38a1fc-ee6d-486a-af18-314caecb2a9c: 'Menu Section' # Menu Section
+    0f0239d1-49aa-41d8-a24f-3e10ac3b42d9: Square # Square
     1b4fc5f7-77f1-4571-b451-d9dbcc061095: Contact # Contact
     9beb901b-f768-410d-837b-8b81f19768d3: '7 Days Deli' # 7 Days Deli
     37df55ab-8d7b-4469-946d-ca021cba6779: 'Menu Item' # Menu Item
     38e2ccaa-d4df-43b3-a821-e0123b45afb4: 'Menu Item' # Menu Item
+    048f5bfb-56e4-4a31-b5b8-ec1e160a2e1c: Heading # Heading
     74d68e85-fc57-4d6a-8266-8593bfafe4fb: 'Menu Section' # Menu Section
     909ed758-b171-4ffe-a88f-590a4646fc3d: 'Price (roll)' # Price (roll)
     45012e7e-2478-4168-a39e-1e6f3201a18d: Images # Images
+    98999f18-3843-49f8-85e5-2ca9318e973a: Image # Image
     a9c14982-f200-4896-abb1-79eeae7c2649: Menu # Menu
     a8094769-da3b-455c-8d14-d7f6fe24cdaf: 'Home Page' # Home Page
     b03afd44-8426-4eeb-adb6-47b908e1ad1f: '7 Days Deli' # 7 Days Deli
@@ -30,6 +34,7 @@ meta:
     cf204739-4863-4c56-92f9-dbbb551bc806: 'Price (hero)' # Price (hero)
     dd36437f-2cfc-40ed-8dbd-159ac519a24e: 'Rich Text' # Rich Text
     e45c4ec0-5b9b-4c13-9342-7186a53c0392: Simple # Simple
+    fab15d11-714a-48d1-a189-9647d0df4ce1: Triptych # Triptych
 plugins:
   ckeditor:
     edition: standard

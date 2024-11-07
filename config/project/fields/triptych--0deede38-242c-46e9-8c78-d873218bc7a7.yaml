@@ -1,0 +1,20 @@
+columnSuffix: null
+handle: triptych
+instructions: null
+name: Triptych
+searchable: false
+settings:
+  createButtonLabel: null
+  entryTypes:
+    - fab15d11-714a-48d1-a189-9647d0df4ce1 # Triptych
+  includeTableView: false
+  maxEntries: null
+  minEntries: null
+  pageSize: 50
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: false
+  viewMode: cards
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix
