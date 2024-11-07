@@ -40,12 +40,12 @@
 
 </div>
 
-<div class="flex justify-between max-w-7xl mx-auto my-20">
+<div class="flex justify-between flex-wrap max-w-7xl mx-auto my-20">
 {% for block in entry.triptych.all() %}
 {% for asset in block.image %}         
 
    
-    <div class="mx-auto">
+    <div class="mx-auto mt-10">
         <h2 class="text-center text-4xl">{{ block.title }}<h2>
             {% if block.image | length %}
             <img src="{{ asset.url('square') }}">
