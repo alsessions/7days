@@ -1,4 +1,4 @@
-dateModified: 1731016201
+dateModified: 1731022770
 email:
   fromEmail: fultonchain@gmail.com
   fromName: '7 Days Deli'
@@ -44,6 +44,10 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+  seo:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.2.0
 system:
   edition: solo
   live: true

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5173036c427f266e76bf0d676386c808",
+    "content-hash": "50f3fcecb6acf88197b80389d4aaae0c",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -1188,6 +1188,60 @@
                 "source": "https://github.com/darylldoyle/svg-sanitizer/tree/0.19.0"
             },
             "time": "2024-06-18T10:27:15+00:00"
+        },
+        {
+            "name": "ether/seo",
+            "version": "5.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ethercreative/seo.git",
+                "reference": "aa23f778c5d54e8ff387ba36f624cc7b4f23b3d7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ethercreative/seo/zipball/aa23f778c5d54e8ff387ba36f624cc7b4f23b3d7",
+                "reference": "aa23f778c5d54e8ff387ba36f624cc7b4f23b3d7",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^5.0",
+                "php": "^8.2"
+            },
+            "require-dev": {
+                "craftcms/ecs": "dev-main",
+                "craftcms/rector": "dev-main",
+                "phpstan/phpstan": "^1.6"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "handle": "seo",
+                "name": "SEO",
+                "developer": "Ether Creative",
+                "developerUrl": "https://ethercreative.co.uk",
+                "class": "ether\\seo\\Seo"
+            },
+            "autoload": {
+                "psr-4": {
+                    "ether\\seo\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "SEO utilities including a unique field type, sitemap, & redirect manager",
+            "support": {
+                "docs": "https://github.com/ethercreative/seo/blob/v3/README.md",
+                "issues": "https://github.com/ethercreative/seo",
+                "source": "https://github.com/ethercreative/seo/tree/5.0.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/tam",
+                    "type": "github"
+                }
+            ],
+            "time": "2024-10-09T10:52:49+00:00"
         },
         {
             "name": "ezyang/htmlpurifier",
