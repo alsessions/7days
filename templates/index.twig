@@ -4,7 +4,7 @@
     {% include "_partials/_nav.twig" %}
 
     <div class="py-32 md:py-60 flex flex-col items-center justify-center"
-         style="background-image: url('/assets/deli-sandwich.jpg');
+         style="background-image: url('/assets/deli-sandwich2.webp');
                 background-size: cover;
                 background-repeat: no-repeat;
                 background-position: center center;">
@@ -35,7 +35,7 @@
     </div>
 
     <div class="py-10 mx-auto mt-20  bg-gray-800">
-        <div class="max-w-7xl mx-auto  py-8">
+        <div class="px-4 md:px-10 lg:px-10 xl:px-40 mx-auto  py-8 px-2">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {% for block in entry.triptych.all() %}
                     {% for asset in block.image %}

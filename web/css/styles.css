@@ -1401,6 +1401,10 @@ video {
   margin-top: auto;
 }
 
+.mt-6{
+  margin-top: 1.5rem;
+}
+
 .block{
   display: block;
 }
@@ -1449,6 +1453,10 @@ video {
   flex-direction: column;
 }
 
+.flex-col-reverse{
+  flex-direction: column-reverse;
+}
+
 .flex-wrap{
   flex-wrap: wrap;
 }
@@ -1471,6 +1479,10 @@ video {
 
 .gap-6{
   gap: 1.5rem;
+}
+
+.gap-4{
+  gap: 1rem;
 }
 
 .gap-x-4{
@@ -1655,6 +1667,10 @@ video {
   text-align: center;
 }
 
+.align-top{
+  vertical-align: top;
+}
+
 .font-display{
   font-family: Averia Libre, sans-serif;
 }
@@ -1826,7 +1842,19 @@ h1, h2, h3{
   color: rgb(49 46 129 / var(--tw-text-opacity));
 }
 
+@media (min-width: 640px){
+  .sm\:text-3xl{
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+}
+
 @media (min-width: 768px){
+  .md\:my-20{
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+
   .md\:mb-6{
     margin-bottom: 1.5rem;
   }
@@ -1877,6 +1905,15 @@ h1, h2, h3{
     padding-bottom: 15rem;
   }
 
+  .md\:px-20{
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
+  .md\:text-left{
+    text-align: left;
+  }
+
   .md\:text-2xl{
     font-size: 1.5rem;
     line-height: 2rem;
@@ -1919,8 +1956,28 @@ h1, h2, h3{
 }
 
 @media (min-width: 1024px){
+  .lg\:my-32{
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+  }
+
   .lg\:mb-8{
     margin-bottom: 2rem;
+  }
+
+  .lg\:px-32{
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+
+  .lg\:px-20{
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
+  .lg\:px-10{
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
   }
 
   .lg\:pb-\[75\%\]{
@@ -1929,6 +1986,11 @@ h1, h2, h3{
 }
 
 @media (min-width: 1280px){
+  .xl\:my-40{
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+  }
+
   .xl\:grid-cols-3{
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
