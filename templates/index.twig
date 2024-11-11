@@ -1,62 +1,77 @@
 {% include "_partials/_head.twig" %}
-    {% block content %}
-{% include "_partials/_nav.twig" %}
-<div class="py-32 md:py-48 flex flex-col items-center justify-center"
-    style="background-image:url('/assets/deli-sandwich.jpg');
-            background-size:cover;
-            background-repeat:no-repeat;
-            background-position:center center;">
-    <div class="text-4xl md:text-5xl text-white font-display"></div>
-</div>
-<div class=" mx-auto mt-20 px-4 md:px-10 xl:px-40  ">
-   
-   <div class="grid md:grid-cols-2">
-    
-    <div class="prose prose-lg prose-headings:text-indigo-900">
-        {{ entry.richText }}
+
+{% block content %}
+    {% include "_partials/_nav.twig" %}
+
+    <div class="py-32 md:py-48 flex flex-col items-center justify-center"
+         style="background-image: url('/assets/deli-sandwich.jpg');
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center center;">
+        <div class="text-4xl md:text-5xl text-white font-display"></div>
     </div>
 
-    <div>
-        <div class="w-full h-[500px]  lg:h-[640px]">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23276.849325897474!2d-76.32427465106558!3d43.17579041621055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d9e45d09389095%3A0xd66a1d43d9a12aa5!2s80%20Smokey%20Hollow%20Rd%2C%20Baldwinsville%2C%20NY%2013027!5e0!3m2!1sen!2sus!4v1730761994748!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="w-full h-full "></iframe>
+    <div class="mx-auto mt-20 px-4 md:px-10 xl:px-40">
+        <div class="prose prose-lg prose-headings:text-indigo-900">
+            <h1 class="text-center">Open 7 Days - 7am to 12am</h1>
         </div>
     </div>
-   </div>
-</div>
 
-<div class="py-20 bg-black mx-auto mt-20 px-4">
-    <div class="max-w-7xl flex flex-wrap justify-between mx-auto text-white">
-        <div class="mx-auto mb-10 md:mb-0"><h2 class="font-display text-center text-2xl text-white">Fried Chicken</h2>
-            <img src="/assets/wings.png" height="350px" width="350px">
+    <div class="py-10 mx-auto mt-20 px-4 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 py-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {% for block in entry.triptych.all() %}
+                    {% for asset in block.image %}
+                        <div class="bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden flex flex-col h-full">
+                            {% if block.image | length %}
+                                <img src="{{ asset.url('square') }}"
+                                     alt="{{ block.title }}"
+                                     class="w-full h-48 object-cover">
+                            {% endif %}
+                            
+                            <div class="p-6 flex flex-col flex-grow">
+                                <div class="flex-grow">
+                                    <h2 class="text-2xl font-semibold text-gray-800 text-center mb-4">
+                                        {{ block.title }}
+                                    </h2>
+                                    <p class="font-bold text-lg text-gray-600 text-center mb-6 [text-wrap:balance]">
+                                        {{ block.blurb }}
+                                    </p>
+                                </div>
+                                <div class="text-center mt-auto">
+                                    <a href="/menu">
+                                        <button class="px-6 py-2 bg-indigo-500 text-white rounded-md hover:bg-indigo-700 transition-colors duration-300">
+                                            Full Menu
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% endfor %}
+            </div>
         </div>
-        <div class="mx-auto mb-10 md:mb-0"><h2 class="font-display text-center text-2xl text-white">Breakfast Sandwiches</h2>
-                <img src="/assets/b-sandwich02.png" height="350px" width="350px">
-            </div>
-            <div class="mx-auto mb-10 md:mb-0"><h2 class="font-display text-center text-2xl text-white">Subs &amp; Gyros</h2>
-                <img src="/assets/gyro.webp" height="350px" width="350px">
-            </div>
-       
     </div>
 
-</div>
-
-<div class="flex justify-between flex-wrap max-w-7xl mx-auto my-20">
-{% for block in entry.triptych.all() %}
-{% for asset in block.image %}         
-
-   
-    <div class="mx-auto mt-10">
-        <h2 class="text-center text-4xl">{{ block.title }}<h2>
-            {% if block.image | length %}
-            <img src="{{ asset.url('square') }}">
-            {% endif %}
+    <div class="mx-auto mt-20 px-4 md:px-10 xl:px-40">
+        <div class="grid md:grid-cols-2">
+            <div class="prose prose-lg prose-headings:text-indigo-900">
+                {{ entry.richText }}
+            </div>
+            <div>
+                <div class="relative w-full h-0 pb-[56.25%] lg:pb-[75%]">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23276.849325897474!2d-76.32427465106558!3d43.17579041621055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d9e45d09389095%3A0xd66a1d43d9a12aa5!2s80%20Smokey%20Hollow%20Rd%2C%20Baldwinsville%2C%20NY%2013027!5e0!3m2!1sen!2sus!4v1730761994748!5m2!1sen!2sus"
+                            class="absolute top-0 left-0 w-full h-full border-0"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
     </div>
-{% endfor %}
-{% endfor %}
-</div>
+{% endblock %}
 
-
-    {% endblock %}
-    {% include "_partials/_footer.twig" %}
+{% include "_partials/_footer.twig" %}
 </body>
 </html>
