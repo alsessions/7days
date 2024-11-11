@@ -3,7 +3,7 @@
 {% block content %}
     {% include "_partials/_nav.twig" %}
 
-    <div class="py-32 md:py-48 flex flex-col items-center justify-center"
+    <div class="py-32 md:py-60 flex flex-col items-center justify-center"
          style="background-image: url('/assets/deli-sandwich.jpg');
                 background-size: cover;
                 background-repeat: no-repeat;
@@ -11,14 +11,31 @@
         <div class="text-4xl md:text-5xl text-white font-display"></div>
     </div>
 
-    <div class="mx-auto mt-20 px-4 md:px-10 xl:px-40">
-        <div class="prose prose-lg prose-headings:text-indigo-900">
-            <h1 class="text-center">Open 7 Days - 7am to 12am</h1>
+    <div class="mx-auto mt-20 ">
+        <div class=" mx-auto">
+            <h1 class="text-center font-display font-bold text-6xl md:text-7xl">Open 7 Days</h1>
+            <h2 class="text-center font-display font-medium text-4xl md:text-5xl mt-4">7am to 12am</h2>
+            <h3 class="text-center font-medium text-3xl md:text-4xl mt-4">80 Smokey Hollow Rd. 
+                Baldwinsville, NY 13027</h3>
+                <a href="tel:3155555555" ><h3 class="text-center font-medium text-3xl md:text-4xl mt-4 p-2 ">(315) 555-5555</h3></a>
+            <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-4 items-center md:items-start mx-auto my-20 hover:text-black">
+                <a 
+                  href="#" 
+                  class="whitespace-nowrap px-6 py-3 bg-indigo-800 text-white rounded-lg hover:bg-indigo-700 transition-colors duration-200 text-lg font-bold uppercase"
+                >
+                  Order Now
+                </a>
+                <a 
+                  href="/menu" 
+                  class="whitespace-nowrap px-6 py-3 bg-indigo-800 text-white rounded-lg hover:bg-indigo-700 transition-colors duration-200 text-lg font-bold uppercase"
+                >
+                  Full Menu
+                </a>
         </div>
     </div>
 
-    <div class="py-10 mx-auto mt-20 px-4 bg-gray-100">
-        <div class="max-w-7xl mx-auto px-4 py-8">
+    <div class="py-10 mx-auto mt-20  bg-gray-800">
+        <div class="max-w-7xl mx-auto  py-8">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {% for block in entry.triptych.all() %}
                     {% for asset in block.image %}
@@ -40,7 +57,7 @@
                                 </div>
                                 <div class="text-center mt-auto">
                                     <a href="/menu">
-                                        <button class="px-6 py-2 bg-indigo-500 text-white rounded-md hover:bg-indigo-700 transition-colors duration-300">
+                                        <button class="px-6 py-2 bg-indigo-500 text-white rounded-md hover:bg-indigo-700 transition-colors duration-300 mt-10 uppercase font-medium">
                                             Full Menu
                                         </button>
                                     </a>
@@ -56,7 +73,7 @@
     <div class="mx-auto mt-20 px-4 md:px-10 xl:px-40">
         <div class="grid md:grid-cols-2">
             <div class="prose prose-lg prose-headings:text-indigo-900">
-                {{ entry.richText }}
+               Meh, Dunno
             </div>
             <div>
                 <div class="relative w-full h-0 pb-[56.25%] lg:pb-[75%]">
