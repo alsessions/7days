@@ -1,4 +1,4 @@
-dateModified: 1731284137
+dateModified: 1731292153
 email:
   fromEmail: fultonchain@gmail.com
   fromName: '7 Days Deli'
@@ -49,6 +49,48 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 3.2.0
+    settings:
+      description: 'Open 7am-12am daily in Baldwinsville, NY. Serving fresh breakfast all day, signature sandwiches, wings, and fried chicken. Family-owned deli offering made-to-order meals, from classic BLTs to specialty subs and gyros. Visit us at 80 Smokey Hollow Rd or call (315) 555-5555.'
+      facebookAppId: ''
+      metaTemplate: ''
+      removeAlternateUrls: ''
+      robots:
+        - ''
+        - ''
+        - ''
+        - ''
+        - ''
+        - ''
+      robotsTxt: "{# Sitemap URL #}\r\nSitemap: {{ url(seo.sitemapName ~ '.xml') }}\r\n\r\n{# Disallows #}\r\n{% if craft.app.config.env != 'production' %}\r\n\r\n{# Disallow access to everything when NOT in production #}\r\nUser-agent: *\r\nDisallow: /\r\n\r\n{% else %}\r\n\r\n{# Disallow access to cpresources/ when live #}\r\nUser-agent: *\r\nDisallow: /cpresources/\r\n\r\n{% endif %}"
+      sitemapLimit: '1000'
+      sitemapName: sitemap
+      socialImage:
+        - '305'
+      title:
+        -
+          __assoc__:
+            -
+              - key
+              - '1'
+            -
+              - locked
+              - '0'
+            -
+              - template
+              - '{title}'
+        -
+          __assoc__:
+            -
+              - key
+              - '2'
+            -
+              - locked
+              - '1'
+            -
+              - template
+              - ' - {{ siteName }}'
+      titleSuffix: null
+      twitterHandle: ''
 system:
   edition: solo
   live: true
