@@ -1,4 +1,4 @@
-dateModified: 1731292153
+dateModified: 1731447726
 email:
   fromEmail: fultonchain@gmail.com
   fromName: '7 Days Deli'
@@ -31,7 +31,7 @@ meta:
     b2cddd31-9ff2-4853-b99a-ca30c543baf4: 'Price (bagel)' # Price (bagel)
     b98fec3c-d4ba-4e3d-93ac-ec92c32b4715: Item # Item
     cb6bdfcf-f7b2-40dd-a5a8-adc0eb8dd464: 'Rich Text' # Rich Text
-    cf204739-4863-4c56-92f9-dbbb551bc806: 'Price (hero)' # Price (hero)
+    cf204739-4863-4c56-92f9-dbbb551bc806: 'Price (Hero, Large or Single)' # Price (Hero, Large or Single)
     dd36437f-2cfc-40ed-8dbd-159ac519a24e: 'Rich Text' # Rich Text
     e45c4ec0-5b9b-4c13-9342-7186a53c0392: Simple # Simple
     eb8b1d14-8f3c-413a-8833-a9121228b253: Blurb # Blurb
@@ -95,7 +95,7 @@ system:
   edition: solo
   live: true
   name: '7 Days Deli'
-  schemaVersion: 5.3.0.2
+  schemaVersion: 5.5.0.0
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false

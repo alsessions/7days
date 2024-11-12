@@ -1,6 +1,6 @@
 columnSuffix: null
 handle: blurb
-instructions: null
+instructions: 'A few lines of descriptive text.'
 name: Blurb
 searchable: false
 settings:

@@ -25,7 +25,7 @@ fieldLayouts:
             placeholder: null
             providesThumbs: false
             readonly: false
-            requirable: false
+            required: true
             size: null
             step: null
             tip: null
@@ -54,7 +54,7 @@ fieldLayouts:
           -
             dateAdded: '2024-11-04T18:03:07+00:00'
             elementCondition: null
-            fieldUid: cf204739-4863-4c56-92f9-dbbb551bc806 # Price (hero)
+            fieldUid: cf204739-4863-4c56-92f9-dbbb551bc806 # Price (Hero, Large or Single)
             handle: null
             includeInCards: false
             instructions: null
@@ -73,8 +73,8 @@ fieldLayouts:
             fieldUid: b2cddd31-9ff2-4853-b99a-ca30c543baf4 # Price (bagel)
             handle: null
             includeInCards: false
-            instructions: null
-            label: null
+            instructions: 'Medium size items and bagel sandwiches.'
+            label: 'Price (Bagel or Medium)'
             providesThumbs: false
             required: false
             tip: null
@@ -89,8 +89,8 @@ fieldLayouts:
             fieldUid: 909ed758-b171-4ffe-a88f-590a4646fc3d # Price (roll)
             handle: null
             includeInCards: false
-            instructions: null
-            label: null
+            instructions: 'Use for sandwiches on a roll or Small items.'
+            label: 'Price (Roll or Small)'
             providesThumbs: false
             required: false
             tip: null

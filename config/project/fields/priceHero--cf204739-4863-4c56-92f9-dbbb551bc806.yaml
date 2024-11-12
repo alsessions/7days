@@ -1,7 +1,7 @@
 columnSuffix: null
 handle: priceHero
-instructions: null
-name: 'Price (hero)'
+instructions: 'Use for the large version of a product. Also use for single sized items.'
+name: 'Price (Hero, Large or Single)'
 searchable: false
 settings:
   currency: USD
