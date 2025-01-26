@@ -1,4 +1,4 @@
-dateModified: 1731447726
+dateModified: 1737921803
 email:
   fromEmail: fultonchain@gmail.com
   fromName: '7 Days Deli'
@@ -95,7 +95,7 @@ system:
   edition: solo
   live: true
   name: '7 Days Deli'
-  schemaVersion: 5.5.0.0
+  schemaVersion: 5.6.0.2
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false
