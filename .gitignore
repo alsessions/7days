@@ -3,3 +3,17 @@
 /vendor
 /node_modules
 .DS_Store
+
+# Craft CMS
+/storage/*
+/web/cpresources/*
+/web/assets/*
+/config/license.key
+
+# Craft backups & logs
+/storage/backups/*
+/storage/logs/*
+/storage/runtime/*
+
+# Keep .gitkeep files
+!/**/.gitkeep
