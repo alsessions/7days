@@ -7,14 +7,14 @@
 # Craft CMS
 /storage/*
 /web/cpresources/*
-/web/assets/*
-/config/license.key
+
+
 
 # Craft backups & logs
 /storage/backups/*
 /storage/logs/*
 /storage/runtime/*
-/config/license.key
+
 
 # Keep .gitkeep files
 !/**/.gitkeep
