@@ -1,4 +1,4 @@
-dateModified: 1737921803
+dateModified: 1788051137
 email:
   fromEmail: fultonchain@gmail.com
   fromName: '7 Days Deli'
@@ -33,18 +33,13 @@ meta:
     cb6bdfcf-f7b2-40dd-a5a8-adc0eb8dd464: 'Rich Text' # Rich Text
     cf204739-4863-4c56-92f9-dbbb551bc806: 'Price (Hero, Large or Single)' # Price (Hero, Large or Single)
     dd36437f-2cfc-40ed-8dbd-159ac519a24e: 'Rich Text' # Rich Text
-    e45c4ec0-5b9b-4c13-9342-7186a53c0392: Simple # Simple
     eb8b1d14-8f3c-413a-8833-a9121228b253: Blurb # Blurb
     fab15d11-714a-48d1-a189-9647d0df4ce1: Triptych # Triptych
 plugins:
   ckeditor:
     edition: standard
     enabled: true
-    schemaVersion: 3.0.0.0
-  cp-field-inspect:
-    edition: standard
-    enabled: true
-    schemaVersion: 1.0.0
+    schemaVersion: 5.6.0.0
   seo:
     edition: standard
     enabled: true
@@ -95,7 +90,7 @@ system:
   edition: solo
   live: true
   name: '7 Days Deli'
-  schemaVersion: 5.6.0.2
+  schemaVersion: 5.10.0.0
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false

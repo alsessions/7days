@@ -14,7 +14,6 @@ fieldLayouts:
             disabled: false
             elementCondition: null
             id: null
-            includeInCards: false
             inputType: null
             instructions: null
             label: null
@@ -23,7 +22,6 @@ fieldLayouts:
             name: null
             orientation: null
             placeholder: null
-            providesThumbs: false
             readonly: false
             required: true
             size: null
@@ -40,10 +38,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: b98fec3c-d4ba-4e3d-93ac-ec92c32b4715 # Item
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -56,10 +52,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: cf204739-4863-4c56-92f9-dbbb551bc806 # Price (Hero, Large or Single)
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -72,10 +66,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: b2cddd31-9ff2-4853-b99a-ca30c543baf4 # Price (bagel)
             handle: null
-            includeInCards: false
             instructions: 'Medium size items and bagel sandwiches.'
             label: 'Price (Bagel or Medium)'
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -88,10 +80,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 909ed758-b171-4ffe-a88f-590a4646fc3d # Price (roll)
             handle: null
-            includeInCards: false
             instructions: 'Use for sandwiches on a roll or Small items.'
             label: 'Price (Roll or Small)'
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
