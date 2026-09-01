@@ -7,5 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
     <meta name="referrer" content="origin-when-cross-origin" />
     <link href="/css/styles.css" rel="stylesheet">
+    {% if useAlpine|default(false) %}
+        <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    {% endif %}
 </head>
-<body class="ltr bg-indigo-50/50" >
+<body class="{{ bodyClass|default('ltr bg-indigo-50/50 font-sans') }}">

@@ -1,54 +1,97 @@
+{% set bodyClass = 'ltr bg-[#0f0f0f] text-[#e8e0d0] font-sans' %}
+{% set useAlpine = true %}
 {% include "_partials/_head.twig" %}
-    {% block content %}
+
+{% block content %}
     {% include "_partials/_nav.twig" %}
-    <div class="py-32 md:py-60 flex flex-col items-center justify-center"
-    style="background-image: url('/assets/menu.webp');
-           background-size: cover;
-           background-repeat: no-repeat;
-           background-position: center center;">
-   <div class="text-4xl md:text-5xl text-white font-display"></div>
-</div>
-    <div class=" mx-auto mt-20 px-4 md:px-10 xl:px-40 ">
-    
-        <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-10 mx-auto not-prose">
-            {% set menu = craft.entries().section('menuSection').limit(10) %}
-            {% set entries = menu.all() %}
-            {% for entry in entries %}
-            <div>
-                <h2 class="text-2xl md:text-3xl mb-4 md:mb-6 lg:mb-8 text-center font-bold text-indigo-900">{{ entry.title }}</h2>
-                <div class="text-center md:text-sm px-4">
-                {{ entry.richText }}
-                </div>
-                {% for block in entry.menuItem.all() %}
-               
-                <div class="flex justify-between gap-10 border-b border-indigo-200 my-2 pb-2">
-                    <div>
-                        <span class="text-lg text-gray-800">{{ block.title }}</span><br>
-                        <span class="text-sm italic">{{ block.item }}</span>
-                    </div>
-                    <div class="flex justify-between gap-x-4">
-                        {% if block.priceHero | length %}
-                        <div class="text-base">{{ block.priceHero | money }}</div>
-                        {% endif %}
-                        {% if block.priceBagel | length %}
-                        <div class="text-base">{{ block.priceBagel | money }}</div>
-                        {% endif %}
-                        {% if block.priceRoll | length %}
-                        <div class="text-base">{{ block.priceRoll | money }}</div>
-                        {% endif %}
-                    </div>
-                </div>
-                {% endfor %}
+    {% set menuSections = craft.entries().section('menuSection').limit(10).all() %}
 
+    <section id="menu-top" class="relative flex h-[34rem] scroll-mt-6 items-center justify-center px-6 text-center md:h-[44rem]"
+             style="background-image: linear-gradient(rgba(15, 15, 15, 0.42), rgba(15, 15, 15, 0.9)), url('/assets/menu.webp');
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center center;">
+        <div class="max-w-4xl">
+            <p class="mb-5 text-xs font-bold uppercase tracking-[0.35em] text-[#c9a84c] md:text-sm">
+                Breakfast served all day
+            </p>
+            <h1 class="text-5xl font-bold leading-none text-[#f5f0e8] md:text-7xl lg:text-8xl">
+                Full Menu
+            </h1>
+            <div class="mx-auto mt-8 h-px w-20 bg-[#c9a84c]"></div>
+        </div>
+    </section>
 
-
-
-            </div>
-
+    <nav aria-label="Menu sections" class="border-y border-[#c9a84c]/25 bg-[#1c1c1c] px-4 py-5 md:px-10">
+        <div class="mx-auto flex max-w-7xl flex-wrap justify-center gap-x-7 gap-y-3">
+            {% for menuSection in menuSections %}
+                <a href="#{{ menuSection.slug }}"
+                   class="text-xs font-bold uppercase tracking-[0.18em] text-[#9a8f80] transition-colors duration-200 hover:text-[#c9a84c]">
+                    {{ menuSection.title }}
+                </a>
             {% endfor %}
         </div>
+    </nav>
+
+    <main class="border-t border-[#c9a84c]/25 bg-[#0f0f0f] px-4 py-20 md:px-10 md:py-28 xl:px-20">
+        <div class="mx-auto grid max-w-7xl gap-x-10 gap-y-16 md:grid-cols-2 xl:grid-cols-3">
+            {% for menuSection in menuSections %}
+                <section id="{{ menuSection.slug }}" class="scroll-mt-6">
+                    <div class="border-b border-[#c9a84c]/30 pb-5 text-center">
+                        <h2 class="text-3xl font-bold text-[#f5f0e8] md:text-4xl">
+                            {{ menuSection.title }}
+                        </h2>
+                        <div class="prose prose-sm mx-auto mt-3 text-[#9a8f80] prose-p:text-[#9a8f80]">
+                            {{ menuSection.richText }}
+                        </div>
+                    </div>
+
+                    <div class="mt-5 divide-y divide-[#c9a84c]/15">
+                        {% for block in menuSection.menuItem.all() %}
+                            <article class="flex justify-between gap-5 py-4">
+                                <div class="min-w-0">
+                                    <h3 class="font-sans text-base font-bold leading-snug tracking-normal text-[#e8e0d0]">
+                                        {{ block.title }}
+                                    </h3>
+                                    <p class="mt-1 text-sm leading-relaxed text-[#9a8f80]">
+                                        {{ block.item }}
+                                    </p>
+                                </div>
+                                <div class="flex shrink-0 gap-3 text-sm font-bold text-[#c9a84c]">
+                                    {% if block.priceHero | length %}
+                                        <span>{{ block.priceHero | money }}</span>
+                                    {% endif %}
+                                    {% if block.priceBagel | length %}
+                                        <span>{{ block.priceBagel | money }}</span>
+                                    {% endif %}
+                                    {% if block.priceRoll | length %}
+                                        <span>{{ block.priceRoll | money }}</span>
+                                    {% endif %}
+                                </div>
+                            </article>
+                        {% endfor %}
+                    </div>
+                </section>
+            {% endfor %}
+        </div>
+    </main>
+
+    <div x-data="{ visible: false }"
+         x-init="visible = window.scrollY > 320"
+         x-on:scroll.window="visible = window.scrollY > 320"
+         x-show="visible"
+         x-transition.opacity
+         x-cloak
+         class="fixed bottom-5 right-4 z-50 md:bottom-8 md:right-8">
+        <a href="#menu-top"
+           x-on:click.prevent="document.getElementById('menu-top').scrollIntoView({ behavior: 'smooth' })"
+           aria-label="Back to top"
+           class="flex h-12 w-12 items-center justify-center rounded-full border border-[#c9a84c] bg-[#1c1c1c]/95 text-2xl leading-none text-[#c9a84c] shadow-lg transition-colors duration-200 hover:bg-[#c9a84c] hover:text-[#0f0f0f]">
+            <span aria-hidden="true">↑</span>
+        </a>
     </div>
-    {% endblock %}
-    {% include "_partials/_footer.twig" %}
+{% endblock %}
+
+{% include "_partials/_footer.twig" %}
 </body>
 </html>

@@ -4,8 +4,8 @@ module.exports = {
   content: [],
   theme: {
     fontFamily: {
-      sans: [ 'sans-serif'],
-      display: ['Averia Libre', 'sans-serif']
+      sans: ['Lato', 'sans-serif'],
+      display: ['Playfair Display', 'serif']
     },
     extend: {},
   },

@@ -1,96 +1,111 @@
+{% set bodyClass = 'ltr bg-[#0f0f0f] text-[#e8e0d0] font-sans' %}
 {% include "_partials/_head.twig" %}
 
 {% block content %}
     {% include "_partials/_nav.twig" %}
 
     {# Hero Section #}
-    <div class="py-32 md:py-60 flex flex-col items-center justify-center"
-         style="background-image: url('/assets/deli-sandwich2.webp');
-                background-size: cover;
-                background-repeat: no-repeat;
-                background-position: center center;">
-        <div class="text-4xl md:text-5xl text-white font-display"></div>
-    </div>
+    <section class="relative isolate flex h-[34rem] items-center justify-center overflow-hidden px-6 text-center md:h-[44rem]"
+             style="background-image: linear-gradient(rgba(15, 15, 15, 0.38), rgba(15, 15, 15, 0.88)), url('/assets/deli-sandwich2.webp');
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center center;">
+        <div class="max-w-5xl">
+            <p class="mb-6 text-xs font-bold uppercase tracking-[0.35em] text-[#c9a84c] md:text-sm">
+                Baldwinsville, New York
+            </p>
+            <h1 class="text-5xl font-bold leading-none text-[#f5f0e8] [text-wrap:balance] md:text-7xl lg:text-8xl">
+                7 Days Deli &amp; Grill
+            </h1>
+            <div class="mx-auto mt-8 h-px w-20 bg-[#c9a84c]"></div>
+        </div>
+    </section>
 
     {# Hours & Location Section #}
-    <div class="mx-auto mt-20">
-        <div class="mx-auto">
-            <h1 class="text-center font-display font-bold text-6xl md:text-7xl">
+    <section class="border-y border-[#c9a84c]/25 bg-[#0f0f0f] px-4 py-20 md:py-28">
+        <div class="mx-auto max-w-5xl text-center">
+            <p class="mb-5 text-xs font-bold uppercase tracking-[0.35em] text-[#c9a84c]">
+                Hours &amp; location
+            </p>
+            <h2 class="text-5xl font-bold leading-tight text-[#f5f0e8] md:text-7xl">
                 Open 7 Days
-            </h1>
-            <h2 class="text-center font-display font-medium text-4xl md:text-5xl mt-4">
-                7am to 12am
             </h2>
-            <h3 class="text-center font-medium text-3xl md:text-4xl mt-4">
+            <p class="mt-3 font-display text-3xl font-bold text-[#c9a84c] md:text-4xl">
+                7am to 12am
+            </p>
+            <p class="mt-8 text-lg text-[#9a8f80] md:text-xl">
                 80 Smokey Hollow Rd. Baldwinsville, NY 13027
-            </h3>
-            <a href="tel:3153030281">
-                <h3 class="text-center font-medium text-3xl md:text-4xl mt-4 p-2">
-                    (315) 303-0281
-                </h3>
+            </p>
+            <a href="tel:3153030281"
+               class="mt-3 inline-block text-lg font-bold tracking-wide text-[#e8e0d0] transition-colors duration-200 hover:text-[#c9a84c] md:text-xl">
+                (315) 303-0281
             </a>
 
-            {# CTA Buttons #}
-            <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-4 items-center md:items-start mx-auto my-20">
-                <a href="#" 
-                   class="whitespace-nowrap px-6 py-3 bg-indigo-800 text-white rounded-lg hover:bg-indigo-700 transition-colors duration-200 text-lg font-bold uppercase">
+            <div class="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
+                <a href="#order-online"
+                   class="inline-block min-w-44 border border-[#c9a84c] px-7 py-3 text-sm font-bold uppercase tracking-[0.2em] text-[#c9a84c] transition-colors duration-200 hover:bg-[#c9a84c] hover:text-[#0f0f0f]">
                     Order Now
                 </a>
-                <a href="/menu" 
-                   class="whitespace-nowrap px-6 py-3 bg-indigo-800 text-white rounded-lg hover:bg-indigo-700 transition-colors duration-200 text-lg font-bold uppercase">
+                <a href="/menu"
+                   class="inline-block min-w-44 border border-[#c9a84c]/40 px-7 py-3 text-sm font-bold uppercase tracking-[0.2em] text-[#e8e0d0] transition-colors duration-200 hover:border-[#c9a84c] hover:text-[#c9a84c]">
                     Full Menu
                 </a>
             </div>
         </div>
-    </div>
+    </section>
 
     {# Triptych Section #}
-    <div class="py-10 mx-auto mt-20 bg-gray-800">
-        <div class="px-4 md:px-10 lg:px-10 xl:px-40 mx-auto py-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <section class="bg-[#1c1c1c] px-4 py-20 md:px-10 md:py-28 xl:px-40">
+        <div class="mx-auto max-w-7xl">
+            <div class="grid grid-cols-1 gap-px overflow-hidden border border-[#c9a84c]/20 bg-[#c9a84c]/20 md:grid-cols-3">
                 {% for block in entry.triptych.all() %}
                     {% for asset in block.image %}
-                        <div class="bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden flex flex-col h-full">
+                        <article class="flex h-full flex-col bg-[#1c1c1c]">
                             {% if block.image|length %}
                                 <img src="{{ asset.url('square') }}"
                                      alt="{{ block.title }}"
-                                     class="w-full h-48 object-cover">
+                                     class="h-64 w-full object-cover opacity-90 md:h-56 lg:h-72">
                             {% endif %}
-                            
-                            <div class="p-6 flex flex-col flex-grow">
+
+                            <div class="flex flex-grow flex-col p-7 text-center md:p-8">
                                 <div class="flex-grow">
-                                    <h2 class="text-2xl font-semibold text-gray-800 text-center mb-4 uppercase">
+                                    <h2 class="text-2xl font-bold text-[#f5f0e8]">
                                         {{ block.title }}
                                     </h2>
-                                    <div class="font-bold text-lg text-gray-600 text-center mb-6 [text-wrap:balance] prose">
+                                    <div class="prose mt-4 text-[#9a8f80] [text-wrap:balance] prose-p:text-[#9a8f80]">
                                         {{ block.blurb|markdown }}
                                     </div>
                                 </div>
-                                <div class="text-center mt-auto">
+                                <div class="mt-8">
                                     <a href="/menu"
-                                       class="inline-block px-6 py-2 bg-indigo-500 text-white rounded-md hover:bg-indigo-700 transition-colors duration-300 mt-10 uppercase font-medium">
+                                       class="inline-block border-b border-[#c9a84c] pb-1 text-xs font-bold uppercase tracking-[0.22em] text-[#c9a84c] transition-colors duration-200 hover:text-[#f5f0e8]">
                                         Full Menu
                                     </a>
                                 </div>
                             </div>
-                        </div>
+                        </article>
                     {% endfor %}
                 {% endfor %}
             </div>
         </div>
-    </div>
+    </section>
 
     {# About & Map Section #}
-    <div class="mx-auto mt-20 px-4 md:px-10 xl:px-40">
-        <div class="grid md:grid-cols-2 gap-6">
-            <div class="prose prose-lg prose-headings:text-indigo-900">
-                <p>7 Days Deli & Grill serves breakfast, sandwiches, and more. From egg sandwiches and omelets to deli subs, gyros, and fried chicken.</p>
-                <p>We serve breakfast all day, and our full menu is available from open to close at midnight. You can find us at 80 Smokey Hollow Road, order online (coming soon) or call ahead to pickup.</p>
-            </div>
+    <section class="bg-[#0f0f0f] px-4 py-20 md:px-10 md:py-28 xl:px-40">
+        <div class="mx-auto grid max-w-7xl items-center gap-12 md:grid-cols-2 lg:gap-20">
             <div>
-                <div class="relative w-full h-0 pb-[56.25%] lg:pb-[75%]">
+                <p class="mb-5 text-xs font-bold uppercase tracking-[0.35em] text-[#c9a84c]">
+                    Deli, grill &amp; breakfast
+                </p>
+                <div class="space-y-6 font-display text-xl font-bold leading-[1.75] text-[#e8e0d0] md:text-2xl">
+                    <p>7 Days Deli &amp; Grill serves breakfast, sandwiches, and more. From egg sandwiches and omelets to deli subs, gyros, and fried chicken.</p>
+                    <p>We serve breakfast all day, and our full menu is available from open to close at midnight. You can find us at 80 Smokey Hollow Road, order online (coming soon) or call ahead to pickup.</p>
+                </div>
+            </div>
+            <div class="border border-[#c9a84c]/25 p-2">
+                <div class="relative h-0 w-full pb-[75%]">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23276.849325897474!2d-76.32427465106558!3d43.17579041621055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d9e45d09389095%3A0xd66a1d43d9a12aa5!2s80%20Smokey%20Hollow%20Rd%2C%20Baldwinsville%2C%20NY%2013027!5e0!3m2!1sen!2sus!4v1730761994748!5m2!1sen!2sus"
-                            class="absolute top-0 left-0 w-full h-full border-0"
+                            class="absolute left-0 top-0 h-full w-full border-0 grayscale-[35%]"
                             allowfullscreen=""
                             loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade">
@@ -98,7 +113,46 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+
+    {# Online Ordering Section #}
+    <section id="order-online" class="scroll-mt-6 border-t border-[#c9a84c]/25 bg-[#1c1c1c] px-4 py-20 text-center md:px-10 md:py-28">
+        <div class="mx-auto max-w-5xl">
+            <p class="mb-5 text-xs font-bold uppercase tracking-[0.35em] text-[#c9a84c]">
+                Delivery &amp; pickup
+            </p>
+            <h2 class="text-4xl font-bold text-[#f5f0e8] md:text-6xl">
+                Order Online
+            </h2>
+            <p class="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-[#9a8f80]">
+                We're on all your favorite platforms—pick one and let's eat.
+            </p>
+
+            <div class="mt-10 grid gap-4 sm:grid-cols-3">
+                <a href="https://www.doordash.com/store/7-days-mini-mart-&amp;-deli-2-incorporated-baldwinsville-32923367/77688351/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="flex items-center justify-center gap-3 bg-[#ff3008] px-6 py-4 text-sm font-bold tracking-wide text-white transition-transform duration-200 hover:-translate-y-1">
+                    <span aria-hidden="true" class="text-xl">🛵</span>
+                    Order on DoorDash
+                </a>
+                <a href="https://www.grubhub.com/restaurant/7-days-mini-mart--deli-2-incorporated-80-smokey-hollow-rd-baldwinsville/10474248"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="flex items-center justify-center gap-3 bg-[#f63440] px-6 py-4 text-sm font-bold tracking-wide text-white transition-transform duration-200 hover:-translate-y-1">
+                    <span aria-hidden="true" class="text-xl">🥡</span>
+                    Order on Grubhub
+                </a>
+                <a href="https://www.ubereats.com/store/7-days-mini-mart-%26-deli-2-incorporated-baldwinsville/oKYbVTa_Q6KCD0dJXbp0Qw"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="flex items-center justify-center gap-3 bg-[#06c167] px-6 py-4 text-sm font-bold tracking-wide text-[#0f0f0f] transition-transform duration-200 hover:-translate-y-1">
+                    <span aria-hidden="true" class="text-xl">🚴</span>
+                    Order on Uber Eats
+                </a>
+            </div>
+        </div>
+    </section>
 {% endblock %}
 
 {% include "_partials/_footer.twig" %}
