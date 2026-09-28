@@ -100,7 +100,7 @@ class m260928_120000_update_menu_from_print_menu extends Migration
 
     private function saveEntry(Entry $entry): void
     {
-        if (!Craft::$app->getElements()->saveElement($entry)) {
+        if (!Craft::$app->getElements()->saveElement($entry, false)) {
             throw new RuntimeException(sprintf(
                 'Could not save "%s": %s',
                 $entry->title,
